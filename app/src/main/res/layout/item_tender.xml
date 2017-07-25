@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ifb_no"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="top"
+                    />
+                <TextView
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/ifd_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ifb_no"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="top"
+                    />
+
+            </LinearLayout>
+
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bide_title"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/bid_title"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/published_date"
+                        android:layout_gravity="bottom"
+                        />
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/published_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/published_date"
+                        android:layout_gravity="bottom"
+                        />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+                <TextView
+
+                    android:layout_gravity="right"
+                    android:paddingLeft="2sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/red"
+                    android:text="@string/remain"
+                    />
+                <TextView
+
+                    android:layout_gravity="right"
+                    android:paddingLeft="2sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/days_left"
+                    android:textSize="15sp"
+                    android:textColor="@color/red"
+                    android:text="@string/days_left"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+   </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>
