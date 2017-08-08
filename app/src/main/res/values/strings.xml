@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ppmo</string>
+    <string name="app_name">Tender Suchana</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -14,4 +14,6 @@
     <string name="published_date">Published Date : </string>
     <string name="days_left">Days Left</string>
     <string name="remain">Remaining :</string>
+    <string name="notification">Notification</string>
+    <string name="ok">OK</string>
 </resources>

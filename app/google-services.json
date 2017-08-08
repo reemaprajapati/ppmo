@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "319923780278",
+    "firebase_url": "https://tender-suchana.firebaseio.com",
+    "project_id": "tender-suchana",
+    "storage_bucket": "tender-suchana.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319923780278:android:36d5a070d6901bfb",
+        "android_client_info": {
+          "package_name": "com.example.otimus.ppmo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319923780278-hvkobdecbdgns18hp827gn6v7ctnaj9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaxS7TnMNSgj3RdC-BhsKSRoUt_uIvoho"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,7 @@
 package com.example.otimus.ppmo.activities;
 
+import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -14,10 +16,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Switch;
 
 import com.example.otimus.ppmo.R;
 import com.example.otimus.ppmo.fragments.FragmentCategory;
 import com.example.otimus.ppmo.fragments.FragmentList;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,12 +32,25 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private TabLayout tabLayout;
     ViewPager viewPager;
+    Switch switch_notf;
+    Button btn_ok;
+    Dialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        dialog  = new Dialog(this);
+        dialog.setContentView(R.layout.dialogue_notf);
+
+        switch_notf= (Switch) dialog.findViewById(R.id.switch_notf);
+
+
+        SharedPreferences sharedPrefs = getSharedPreferences("com.example.otimus.ppmo", MODE_PRIVATE);
+        switch_notf.setChecked(sharedPrefs.getBoolean("Notification", true));
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -111,7 +130,42 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+
+            dialog.setTitle("Settings");
+            dialog.show();
+            switch_notf.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (switch_notf.isChecked())
+                    {
+                        FirebaseMessaging.getInstance().subscribeToTopic("news");
+
+                        SharedPreferences.Editor editor = getSharedPreferences("com.example.otimus.ppmo", MODE_PRIVATE).edit();
+                        editor.putBoolean("Notification", true);
+                        editor.commit();
+                    }
+                    else
+                    {
+                        FirebaseMessaging.getInstance().unsubscribeFromTopic("news");
+
+                        SharedPreferences.Editor editor = getSharedPreferences("com.example.otimus.ppmo", MODE_PRIVATE).edit();
+                        editor.putBoolean("Notification", false);
+                        editor.commit();
+                    }
+                }
+            });
+
+            btn_ok= (Button) dialog.findViewById(R.id.btn_ok);
+            btn_ok.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialog.dismiss();
+                }
+            });
+
+
+
+
         }
 
         return super.onOptionsItemSelected(item);
