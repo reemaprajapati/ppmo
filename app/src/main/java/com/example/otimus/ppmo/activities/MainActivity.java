@@ -23,7 +23,6 @@ import android.widget.Switch;
 import com.example.otimus.ppmo.R;
 import com.example.otimus.ppmo.fragments.FragmentCategory;
 import com.example.otimus.ppmo.fragments.FragmentList;
-import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -138,7 +137,7 @@ public class MainActivity extends AppCompatActivity
                 public void onClick(View view) {
                     if (switch_notf.isChecked())
                     {
-                        FirebaseMessaging.getInstance().subscribeToTopic("news");
+//                        FirebaseMessaging.getInstance().subscribeToTopic("news");
 
                         SharedPreferences.Editor editor = getSharedPreferences("com.example.otimus.ppmo", MODE_PRIVATE).edit();
                         editor.putBoolean("Notification", true);
@@ -146,7 +145,7 @@ public class MainActivity extends AppCompatActivity
                     }
                     else
                     {
-                        FirebaseMessaging.getInstance().unsubscribeFromTopic("news");
+//                        FirebaseMessaging.getInstance().unsubscribeFromTopic("news");
 
                         SharedPreferences.Editor editor = getSharedPreferences("com.example.otimus.ppmo", MODE_PRIVATE).edit();
                         editor.putBoolean("Notification", false);
