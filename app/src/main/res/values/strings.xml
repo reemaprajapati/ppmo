@@ -10,10 +10,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ifbNo">IFB No. : </string>
     <string name="bid_title">Bid Title</string>
+    <string name="bid_Title">Bid Title:</string>
     <string name="ifb_no">IFB No. : </string>
     <string name="published_date">Published Date : </string>
     <string name="days_left">Days Left</string>
+    <string name="no_of_days_left">No of Days Left:</string>
     <string name="remain">Remaining :</string>
     <string name="notification">Notification</string>
     <string name="ok">OK</string>
+    <string name="cateogry_name">Procurement Category :</string>
+    <string name="last_date">Last date of bid submission : </string>
+    <string name="bid_opening_date">Bid Opening Date :</string>
+    <string name="ward">Ward:</string>
+
 </resources>

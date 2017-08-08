@@ -2,12 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     tools:context="com.example.otimus.ppmo.fragments.FragmentCategory">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/gridView"
+        android:numColumns="2"
+
+        android:verticalSpacing="3dp"
+        android:horizontalSpacing="3dp"></GridView>
 
 </FrameLayout>
