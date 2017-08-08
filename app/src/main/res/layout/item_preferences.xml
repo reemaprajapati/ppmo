@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:padding="10dp"
+    android:background="#fff">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ichchha Moktan"
+        android:id="@+id/titleList"
+
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ichchha Moktan"
+        android:id="@+id/descriptionList"
+
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+
+        android:layout_below="@+id/titleList"
+        />
+
+
+
+</RelativeLayout>
