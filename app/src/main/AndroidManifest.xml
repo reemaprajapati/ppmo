@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.otimus.ppmo">
 
+    <service android:name=".MyFirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+    </service>
+
+    <service android:name=".FirebaseIDService">
+        <intent-filter>
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+        </intent-filter>
+    </service>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -23,11 +34,6 @@
         </activity>
         <activity android:name=".activities.DescriptionActivity"
             android:label="Description">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
 
         </activity>
         <activity android:name=".activities.WishlistItems"
@@ -37,7 +43,7 @@
 
 
         <activity android:name=".activities.NotificationActivity"
-            android:label="Notification Settings"></activity>
+            android:label="Notification Settings"/>
     </application>
 
 </manifest>
