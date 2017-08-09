@@ -1,18 +1,22 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
-    tools:context="com.example.otimus.ppmo.fragments.FragmentCategory">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <GridView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/gridView"
-        android:numColumns="2"
+        android:padding="4dp"
+        tools:context=".MainActivity">
 
-        android:verticalSpacing="3dp"
-        android:horizontalSpacing="3dp"></GridView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
 
-</FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

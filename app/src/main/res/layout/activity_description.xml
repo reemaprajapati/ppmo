@@ -253,7 +253,7 @@
         android:gravity="center"
         android:textColor="#fff"
         android:background="@color/colorAccent"
-        android:text="Add to wishlist"
+        android:text="Save"
         android:layout_gravity="center"
 
         android:textSize="20sp"

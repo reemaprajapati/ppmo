@@ -4,6 +4,7 @@ package com.example.otimus.ppmo.fragments;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -25,10 +26,11 @@ import java.util.List;
  */
 public class FragmentCategory extends Fragment implements View.OnClickListener  {
 
-    GridView gridView;
 
+    private GridLayoutManager lLayout;
     List<Category> list;
     CategoryItemAdapter categoryItemAdapter ;
+    RecyclerView rview;
     ProgressDialog mProgressDialog;
     public FragmentCategory() {
         // Required empty public constructor
@@ -41,20 +43,21 @@ public class FragmentCategory extends Fragment implements View.OnClickListener  
 
         // Inflate the layout for this fragment
         View rootView=inflater.inflate(R.layout.fragment_category, container, false);
-        gridView= (GridView) rootView.findViewById(R.id.gridView);
         list=new ArrayList<Category>();
+        lLayout = new GridLayoutManager(getActivity(), 2);
+        RecyclerView rView=(RecyclerView)rootView.findViewById(R.id.recycler_view);
+        rView.setHasFixedSize(true);
+        rView.setLayoutManager(lLayout);
 
-        list.add(new Category(R.drawable.speaker,"Goods"));
-        list.add(new Category(R.drawable.speaker,"Works"));
-        list.add(new Category(R.drawable.speaker,"Consultancy Services"));
-        list.add(new Category(R.drawable.speaker,"Other Services"));
-        list.add(new Category(R.drawable.speaker,"Ration"));
-        list.add(new Category(R.drawable.speaker,"User Committee"));
-        
-
+        list.add(new Category(R.drawable.ic_menu_camera,"Goods"));
+        list.add(new Category(R.drawable.ic_menu_gallery,"Works"));
+        list.add(new Category(R.drawable.ic_menu_manage,"Consultancy Services"));
+        list.add(new Category(R.drawable.ic_menu_send,"Other Services"));
+        list.add(new Category(R.drawable.ic_menu_share,"Ration"));
+        list.add(new Category(R.drawable.ic_menu_slideshow,"User Committee"));
 
         categoryItemAdapter=new CategoryItemAdapter(getActivity(),list);
-        gridView.setAdapter(categoryItemAdapter);
+        rView.setAdapter(categoryItemAdapter);
         return rootView;
     }
 

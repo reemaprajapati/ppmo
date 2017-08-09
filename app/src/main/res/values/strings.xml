@@ -20,5 +20,6 @@
     <string name="last_date">Last date of bid submission : </string>
     <string name="bid_opening_date">Bid Opening Date :</string>
     <string name="ward">Ward:</string>
+    <string name="country_name">Country Name:</string>
 
 </resources>
