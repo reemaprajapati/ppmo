@@ -64,5 +64,6 @@ public class FragmentCategory extends Fragment implements View.OnClickListener  
     @Override
     public void onClick(View view) {
 
+
     }
 }
