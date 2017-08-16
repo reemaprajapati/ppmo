@@ -16,7 +16,7 @@ public class WishlistItems extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wishlist_items);
 
-        fab=(FloatingActionButton)findViewById(R.id.fab);
+        fab=(FloatingActionButton)findViewById(R.id.fabicon);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

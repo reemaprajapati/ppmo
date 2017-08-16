@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class NotificationActivity extends ActionBarActivity {
+public class NotificationActivity extends ActionBarActivity{
 
     private LinearLayoutManager lLayout;
 

@@ -15,7 +15,7 @@
     <TextView
         android:id="@+id/tv_notification"
         android:text="@string/notification"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
@@ -23,6 +23,7 @@
 
     <Switch
         android:padding="10dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/switch_notf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

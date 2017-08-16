@@ -5,18 +5,14 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 
 import com.example.otimus.ppmo.R;
 import com.example.otimus.ppmo.adapters.CategoryItemAdapter;
-import com.example.otimus.ppmo.adapters.TenderItemAdapter;
 import com.example.otimus.ppmo.model.Category;
-import com.example.otimus.ppmo.model.TenderItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,12 +45,12 @@ public class FragmentCategory extends Fragment implements View.OnClickListener  
         rView.setHasFixedSize(true);
         rView.setLayoutManager(lLayout);
 
-        list.add(new Category(R.drawable.ic_menu_camera,"Goods"));
-        list.add(new Category(R.drawable.ic_menu_gallery,"Works"));
-        list.add(new Category(R.drawable.ic_menu_manage,"Consultancy Services"));
-        list.add(new Category(R.drawable.ic_menu_send,"Other Services"));
-        list.add(new Category(R.drawable.ic_menu_share,"Ration"));
-        list.add(new Category(R.drawable.ic_menu_slideshow,"User Committee"));
+        list.add(new Category(R.drawable.goods_24dp,"Goods"));
+        list.add(new Category(R.drawable.works,"Works"));
+        list.add(new Category(R.drawable.consultancy_services,"Consultancy Services"));
+        list.add(new Category(R.drawable.other_services,"Other Services"));
+        list.add(new Category(R.drawable.ration,"Ration"));
+        list.add(new Category(R.drawable.usercommittee,"User Committee"));
 
         categoryItemAdapter=new CategoryItemAdapter(getActivity(),list);
         rView.setAdapter(categoryItemAdapter);

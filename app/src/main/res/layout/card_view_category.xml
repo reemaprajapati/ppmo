@@ -19,6 +19,7 @@
              android:layout_width="190dp"
              android:layout_height="119dp"
              android:padding="45dp"
+             android:background="@color/white"
              android:contentDescription="@string/action_settings"
              android:src="@drawable/thought"
              android:scaleType="centerCrop" />
@@ -29,13 +30,13 @@
              android:layout_height="wrap_content"
              android:textSize="15sp"
              android:text="@string/country_name"
-             android:textColor="#fff"
+             android:textColor="@color/navyBlue"
              android:gravity="center"
              android:layout_below="@+id/category_img"
              android:paddingBottom="8dp"
              android:paddingTop="8dp"
              android:layout_alignParentBottom="true"
-             android:background="@color/colorPrimaryDark"/>
+             android:background="@color/colorAccent"/>
 
      </RelativeLayout>
 
