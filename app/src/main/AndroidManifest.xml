@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.otimus.ppmo">
 
-    <service android:name=".MyFirebaseMessagingService">
-        <intent-filter>
-            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-        </intent-filter>
-    </service>
 
-    <service android:name=".FirebaseIDService">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <service android:name=".firebase.FirebaseIDService"
+        tools:ignore="WrongManifestParent">
         <intent-filter>
             <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
         </intent-filter>
-    </service>
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <application
+    </service>    <application
         android:allowBackup="true"
         android:icon="@mipmap/launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:uiOptions="splitActionBarWhenNarrow"
             android:theme="@style/AppTheme.NoActionBar">
-<<<<<<< HEAD
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,24 +32,10 @@
             android:label="Description">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
-
-=======
-           <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".activities.DescriptionActivity"
-            android:label="Description">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
->>>>>>> 807693722c34e5ef002c64dcfe21be7c59594803
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
 
-        </activity>
+
         <activity android:name=".activities.WishlistItems"
             android:label="Wishlist Items">
 
